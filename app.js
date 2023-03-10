@@ -7,8 +7,7 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", "views");
 
-app.use(express.static(path.join(__dirname, "views")));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(farmRouter.get("/"));
+app.use(farmRouter);
 
 module.exports = app;
